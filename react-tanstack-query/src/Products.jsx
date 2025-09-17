@@ -1,26 +1,10 @@
-import { useQuery } from "@tanstack/react-query";
-
-async function fetchProduct() {
-  const res = await fetch("https://dummyjson.com/products");
-  if (!res.ok) {
-    throw new Error("Unable to fetch products");
-  }
-  const data = await res.json();
-  return data.products;
-}
+import { Link } from "react-router-dom";
+import useProducts from "./hooks/useProducts";
 
 const Products = () => {
-  const {
-    data: products,
-    isLoading,
-    error,
-  } = useQuery({
-    queryKey: ["products"],
-    queryFn: fetchProduct,
-  });
-
+  const { error, isLoading, products } = useProducts();
   if (isLoading) return <div>Loading...</div>;
-  if (error) return <div>{error}</div>;
+  if (error) return <div>{error.message}</div>;
 
   return (
     <div className="bg-white">
@@ -40,10 +24,10 @@ const Products = () => {
               <div className="mt-4 flex justify-between">
                 <div>
                   <h3 className="text-sm text-gray-700">
-                    <a href="">
+                    <Link to={`/products/${product.id}`}>
                       <span aria-hidden="true" className="absolute inset-0" />
                       {product.title}
-                    </a>
+                    </Link>
                   </h3>
                   <p className="mt-1 text-sm text-gray-500">{product.category}</p>
                 </div>

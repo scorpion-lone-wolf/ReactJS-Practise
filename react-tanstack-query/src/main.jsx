@@ -22,13 +22,21 @@ const router = createBrowserRouter([
 ]);
 
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
+import { ReactQueryDevtools } from "@tanstack/react-query-devtools";
 
-const queryClient = new QueryClient();
+const queryClient = new QueryClient({
+  defaultOptions: {
+    queries: {
+      staleTime: 10000,
+    },
+  },
+});
 
 ReactDOM.createRoot(document.getElementById("root")).render(
   <QueryClientProvider client={queryClient}>
     <React.StrictMode>
       <RouterProvider router={router} />
     </React.StrictMode>
+    <ReactQueryDevtools initialIsOpen={false} />
   </QueryClientProvider>
 );
