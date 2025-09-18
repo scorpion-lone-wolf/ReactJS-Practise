@@ -1,116 +1,12 @@
 {
   "products": [
     {
-      "id": 1,
-      "name": "Wireless Mouse",
-      "price": 599,
-      "category": "Electronics",
-      "inStock": true,
-      "rating": 4.5
-    },
-    {
-      "id": 2,
-      "name": "Mechanical Keyboard",
-      "price": 2499,
-      "category": "Electronics",
-      "inStock": true,
-      "rating": 4.7
-    },
-    {
-      "id": 3,
-      "name": "Bluetooth Headphones",
-      "price": 1999,
-      "category": "Electronics",
-      "inStock": false,
-      "rating": 4.2
-    },
-    {
-      "id": 4,
-      "name": "Gaming Monitor",
-      "price": 12999,
-      "category": "Electronics",
-      "inStock": true,
-      "rating": 4.8
-    },
-    {
-      "id": 5,
-      "name": "Water Bottle",
-      "price": 299,
-      "category": "Home",
-      "inStock": true,
-      "rating": 4.0
-    },
-    {
-      "id": 6,
-      "name": "Vacuum Cleaner",
-      "price": 3999,
-      "category": "Home",
-      "inStock": false,
-      "rating": 4.1
-    },
-    {
-      "id": 7,
-      "name": "Table Lamp",
-      "price": 799,
-      "category": "Home",
-      "inStock": true,
-      "rating": 4.3
-    },
-    {
-      "id": 8,
-      "name": "Running Shoes",
-      "price": 1799,
-      "category": "Fashion",
-      "inStock": true,
-      "rating": 4.3
-    },
-    {
-      "id": 9,
-      "name": "Men's Jacket",
-      "price": 2499,
-      "category": "Fashion",
-      "inStock": false,
-      "rating": 4.6
-    },
-    {
-      "id": 10,
-      "name": "Women's Handbag",
-      "price": 1599,
-      "category": "Fashion",
-      "inStock": true,
-      "rating": 4.4
-    },
-    {
-      "id": 11,
-      "name": "Cookware Set",
-      "price": 3499,
-      "category": "Kitchen",
-      "inStock": true,
-      "rating": 4.7
-    },
-    {
       "id": 12,
       "name": "Non-stick Pan",
       "price": 899,
       "category": "Kitchen",
       "inStock": true,
       "rating": 4.2
-    },
-    {
-      "id": 13,
-      "name": "Coffee Maker",
-      "price": 2999,
-      "category": "Kitchen",
-      "inStock": false,
-      "rating": 4.5
-    },
-    {
-      "id": 14,
-      "name": "Yoga Mat",
-      "price": 499,
-      "category": "Sports",
-      "inStock": true,
-      "rating": 4.1
     },
     {
       "id": 15,
@@ -160,7 +56,6 @@
       "inStock": false,
       "rating": 4.5
     },
-
     {
       "id": 21,
       "name": "Office Desk",
@@ -241,7 +136,6 @@
       "inStock": true,
       "rating": 4.4
     },
-
     {
       "id": 31,
       "name": "Blender",
@@ -322,7 +216,6 @@
       "inStock": true,
       "rating": 4.5
     },
-
     {
       "id": 41,
       "name": "Backpack",
@@ -401,9 +294,8 @@
       "price": 499,
       "category": "Electronics",
       "inStock": true,
-      "rating": 4.0
+      "rating": 4
     },
-
     {
       "id": 51,
       "name": "Projector",
@@ -484,7 +376,6 @@
       "inStock": true,
       "rating": 4.6
     },
-
     {
       "id": 61,
       "name": "Mattress",
@@ -509,7 +400,14 @@
       "inStock": true,
       "rating": 4.3
     },
-    { "id": 64, "name": "Rug", "price": 2999, "category": "Home", "inStock": false, "rating": 4.4 },
+    {
+      "id": 64,
+      "name": "Rug",
+      "price": 2999,
+      "category": "Home",
+      "inStock": false,
+      "rating": 4.4
+    },
     {
       "id": 65,
       "name": "Wall Clock",
@@ -540,7 +438,7 @@
       "price": 799,
       "category": "Home",
       "inStock": true,
-      "rating": 4.0
+      "rating": 4
     },
     {
       "id": 69,
@@ -558,7 +456,6 @@
       "inStock": true,
       "rating": 4.5
     },
-
     {
       "id": 71,
       "name": "Scanner",
@@ -639,7 +536,6 @@
       "inStock": true,
       "rating": 4.9
     },
-
     {
       "id": 81,
       "name": "Processor i7",
@@ -686,7 +582,7 @@
       "price": 299,
       "category": "Accessories",
       "inStock": true,
-      "rating": 4.0
+      "rating": 4
     },
     {
       "id": 87,
@@ -710,7 +606,7 @@
       "price": 399,
       "category": "Accessories",
       "inStock": true,
-      "rating": 4.0
+      "rating": 4
     },
     {
       "id": 90,
@@ -720,7 +616,6 @@
       "inStock": true,
       "rating": 4.4
     },
-
     {
       "id": 91,
       "name": "Smart Glasses",

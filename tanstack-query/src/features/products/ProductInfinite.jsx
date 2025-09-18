@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import Spinner from "../../ui/Spinner";
 import ProductCard from "./ProductCard";
 import useProductsInfinite from "./useProductsInfinite";
@@ -5,10 +6,25 @@ import useProductsInfinite from "./useProductsInfinite";
 const ProductsInfinite = () => {
   const { data, isError, error, isFetchingNextPage, hasNextPage, fetchNextPage, isPending } =
     useProductsInfinite(10);
+  useEffect(() => {
+    function handleScroll() {
+      if (!hasNextPage || isFetchingNextPage) return;
+
+      const { scrollTop, scrollHeight, clientHeight } = document.documentElement;
+
+      // If user scrolled near bottom (e.g. 100px left)
+      if (scrollTop + clientHeight >= scrollHeight) {
+        fetchNextPage();
+      }
+    }
+
+    window.addEventListener("scroll", handleScroll);
+    return () => window.removeEventListener("scroll", handleScroll);
+  }, [hasNextPage, isFetchingNextPage, fetchNextPage]);
 
   if (isPending) return <Spinner />;
   if (isError) return <div>{error.message}</div>;
-
+  console.log(data);
   // Flatten pages into a single array
   const products = data.pages.flatMap(page => page.data);
 

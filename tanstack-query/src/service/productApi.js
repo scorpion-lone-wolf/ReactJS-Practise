@@ -14,3 +14,16 @@ export async function getAllProducts({ page = 1, limit = 10 }) {
     }, 500);
   });
 }
+
+export async function deleteProduct(id) {
+  return new Promise((res, rej) => {
+    setTimeout(async () => {
+      try {
+        const response = await axios.delete(`http://localhost:5000/products/${id}`);
+        res(response.data);
+      } catch (error) {
+        rej(error);
+      }
+    }, 500);
+  });
+}
